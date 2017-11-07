@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.gsst.eaf.core.context.Context;
 import com.gsst.eaf.core.utils.JSON;
+import com.h.web.mq.service.MqService;
 
 @RestController
 @RequestMapping("/public/test")
@@ -21,7 +23,8 @@ public class TestController {
 	
 	@RequestMapping(value = "/test.do",method = { RequestMethod.POST ,RequestMethod.GET})
 	public void test(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		
+		MqService mqService = Context.getBean("mqService");
+		mqService.publishReceive();
 		System.out.println(JSON.serialize("HHHHHHHHHHHHHHHHHHHHHHHHHHHH"));
 	}
 }

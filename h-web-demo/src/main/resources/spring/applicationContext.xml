@@ -19,6 +19,16 @@
 		<property name="default" value="true" />
 	</bean>	
 	
-	
+	<!-- RabbitMQ 消息队列插件 -->
+	<bean id="rabbitMQConfig" class="com.gsst.common.tumbleweed.mq.config.RabbitMQConfig">
+		<property name="host" value="${rabbitmq.host}" />
+		<property name="username" value="${rabbitmq.username}" />
+		<property name="password" value="${rabbitmq.password}" />
+		<property name="port" value="${rabbitmq.port}" />
+		<property name="virtualHost" value="${rabbitmq.virtualHost}" />
+	</bean>
+	<bean class="com.gsst.common.tumbleweed.mq.adapter.RabbitMQAdapter">
+		<constructor-arg index="0" ref="rabbitMQConfig"/>
+	</bean>
 
 </beans>

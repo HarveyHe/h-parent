@@ -10,6 +10,7 @@
 		<module>w-service-demo-parent</module>
 		<module>h-commons</module>
 		<module>h-test-cache</module>
+		<module>common-service-mq-client</module>
 	</modules>
 
 	<properties>

@@ -25,6 +25,6 @@ public class TestController {
 	public void test(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		MqService mqService = Context.getBean("mqService");
 		mqService.publishReceive();
-		System.out.println(JSON.serialize("HHHHHHHHHHHHHHHHHHHHHHHHHHHH"));
+//		System.out.println(JSON.serialize("HHHHHHHHHHHHHHHHHHHHHHHHHHHH"));
 	}
 }

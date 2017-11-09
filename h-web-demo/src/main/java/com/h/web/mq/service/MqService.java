@@ -11,4 +11,8 @@ public interface MqService extends BaseService {
 
     Map<String, String> publishReceive() 
             throws Exception;
+
+	Map<String, Object> receiveMsg2(String message) throws Exception;
+
+	void receiveMsg3(String message) throws Exception;
 }

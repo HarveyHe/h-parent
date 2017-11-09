@@ -15,7 +15,7 @@ public class DemoScheduleServiceImpl implements DemoScheduleService {
 	@Scheduled(cron="*/30 * * * * *")
 	public void test() {
 		Date now = new Date();
-		System.out.println(now);
+//		System.out.println(now);
 	}
 
 }
